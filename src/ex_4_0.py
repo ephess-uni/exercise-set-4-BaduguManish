@@ -12,17 +12,17 @@ def get_shutdown_events(logfile):
     
     with open(logfile, 'r') as file:
         
-        database = file.read()
+        data = file.read()
     
-    shutdowning = list()
+    shutdowns = list()
     
-    for line in database.splitlines():
+    for line in data.splitlines():
         
-        if 'Shutdowns initiated' in line :
+        if 'Shutdown initiated' in line :
             
-            shutdowning.append(line)
+            shutdowns.append(line)
     
-    return shutdowning
+    return shutdowns
     
 
 
