@@ -18,7 +18,7 @@ def get_shutdown_events(logfile):
     
     for line in database.splitlines():
         
-        if 'Shutdowning initiated' in line :
+        if 'Shutdowns initiated' in line :
             
             shutdowning.append(line)
     
